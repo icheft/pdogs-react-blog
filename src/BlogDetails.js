@@ -3,6 +3,8 @@ import useFetch from './useFetch';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { useEffect, useState } from 'react';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -15,10 +17,34 @@ const BlogDetails = () => {
     const history = useHistory();
 
     const handleDelete = () => {
-        fetch('http://localhost:8000/blogs/' + blog.id, {
-            method: 'DELETE',
-        }).then(() => {
-            history.push('/');
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className="custom-alert">
+                        <h1>Are you sure?</h1>
+                        <p>You want to delete this file?</p>
+                        <button onClick={onClose} className="info">
+                            No
+                        </button>
+                        <button
+                            className="danger"
+                            onClick={() => {
+                                fetch(
+                                    'http://localhost:8000/blogs/' + blog.id,
+                                    {
+                                        method: 'DELETE',
+                                    }
+                                ).then(() => {
+                                    history.push('/');
+                                });
+                                onClose();
+                            }}
+                        >
+                            Yes, Delete it!
+                        </button>
+                    </div>
+                );
+            },
         });
     };
 

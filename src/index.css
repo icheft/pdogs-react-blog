@@ -275,3 +275,39 @@ button.edit:hover {
 button.danger:hover {
     background-color: #f14e4e;
 }
+
+/* custom alert */
+
+.custom-alert {
+    text-align: center;
+    width: 500px;
+    padding: 40px;
+    background: #f78e8e;
+    box-shadow: 0 20px 75px rgba(0, 0, 0, 0.23);
+    color: #fff;
+}
+
+.custom-alert > h1 {
+    margin-top: 0;
+}
+
+.custom-alert > button {
+    width: 160px;
+    padding: 10px;
+    border: 1px solid #fff;
+    margin: 10px;
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.custom-alert > button:hover {
+    background: rgba(116, 115, 115, 0.393);
+}
+.custom-alert > button.danger:hover {
+    background: rgba(154, 0, 0, 0.393);
+}
+.custom-alert > button.info:hover {
+    background: rgba(0, 64, 154, 0.393);
+}
