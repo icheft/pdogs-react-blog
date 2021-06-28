@@ -11,7 +11,8 @@
 }
 
 html {
-    /* font-size: 62.5%; */
+    /* font-size: 100%; */
+    font-size: calc(18px + 0.33vw);
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -70,11 +71,11 @@ html {
 }
 
 .nav-item {
-    margin-left: 2rem;
+    margin-left: 1.3rem;
 }
 
 .nav-link {
-    /* font-size: 1.6rem; */
+    font-size: 0.8rem;
     font-weight: 600;
     color: #475569;
 }
@@ -84,7 +85,7 @@ html {
 }
 
 .nav-logo {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     /* font-weight: 500; */
     color: rgb(177, 78, 80);
 }
@@ -151,9 +152,14 @@ html {
 .blog-preview:hover {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
+.blog-preview .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7b0025;
+    margin-bottom: 8px;
+}
 .blog-preview h2 {
-    font-size: 20px;
-    color: rgb(210, 49, 52);
+    font-size: 1.1rem;
     margin-bottom: 8px;
 }
 
@@ -176,7 +182,7 @@ html {
 }
 
 .blog-details h2 {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #7b0025;
     margin-bottom: 10px;
 }
@@ -199,16 +205,17 @@ html {
 
 /* create new blog form */
 .create {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto;
     text-align: center;
 }
 .create label {
     text-align: left;
     display: block;
+    font-weight: bold;
 }
 .create h2 {
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #f1356d;
     margin-bottom: 30px;
 }
@@ -216,7 +223,7 @@ html {
 .create textarea,
 .create select {
     width: 100%;
-    padding: 6px 10px;
+    padding: 9px 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -234,6 +241,8 @@ html {
 /* buttons */
 
 button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -245,7 +254,6 @@ button {
     color: white;
     border-radius: 1px;
     cursor: pointer;
-    /* font-size: 18px; */
     transition-duration: 0.25s;
 }
 

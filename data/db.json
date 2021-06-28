@@ -25,19 +25,29 @@
       "title": "Markdown Post",
       "body": "## Header 2\n\n  _italic_\n\n  **bold**\n\n <b>bold Html</b>",
       "author": "Brian",
+      "date": "2021-06-28",
       "id": 4
     },
     {
       "title": "Markdown Post #2",
       "body": "Yes! This is another `md` post. ",
       "author": "Brian",
+      "date": "2021-06-28",
       "id": 5
     },
     {
       "title": "Test Post",
       "body": "Test Post body.",
       "author": "Brian",
+      "date": "2021-06-28",
       "id": 6
+    },
+    {
+      "title": "post with date",
+      "body": "date test",
+      "author": "Brian",
+      "date": "2021-06-28",
+      "id": 8
     }
   ]
 }

@@ -30,7 +30,8 @@ const BlogDetails = () => {
                 <article>
                     <h1>{blog.title}</h1>
                     <p>
-                        Written by <span className="author">{blog.author}</span>
+                        Written by <span className="author">{blog.author}</span>{' '}
+                        @ {blog.date}
                     </p>
                     <div>
                         <ReactMarkdown rehypePlugins={[rehypeRaw]}>

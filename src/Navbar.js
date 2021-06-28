@@ -24,7 +24,7 @@ const Navbar = () => {
                     </li>
                     <li class="nav-item">
                         <Link to="/create" class="nav-link">
-                            New Post
+                            ✍️
                         </Link>
                     </li>
                 </ul>

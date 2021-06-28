@@ -6,12 +6,17 @@ const Create = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
     const [isPending, setIsPending] = useState(false);
+    const [date, setDate] = useState('');
 
     const history = useHistory();
+    const handleDate = (e) => {
+        const d = new Date().toLocaleDateString('en-CA');
+        setDate(d);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault(); // prevent page from being refreshed
-        const blog = { title, body, author };
+        const blog = { title, body, author, date };
 
         setIsPending(true);
         console.log(blog);
@@ -52,7 +57,7 @@ const Create = () => {
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                 />
-                <label>✍️ Post Author:</label>
+                <label>🙋🏾‍♂️ Post Author:</label>
                 <input
                     type="text"
                     required
@@ -61,7 +66,7 @@ const Create = () => {
                     onChange={(e) => setAuthor(e.target.value)}
                 ></input>
                 <br></br>
-                {!isPending && <button>Add post</button>}
+                {!isPending && <button onClick={handleDate}>Add post</button>}
                 {isPending && <button disabled>Add post...</button>}
             </form>
         </div>
