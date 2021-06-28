@@ -1,18 +1,22 @@
-// import logo from './logo.svg';
-
-// using index.css
 import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
-// we don't react anymore (in v17)
+import { useEffect } from 'react';
 
 function App() {
-    // create variable
-    const title = 'PDOGS Assignment Blog';
-    // need to start with a capital letter
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = '/hamburger.js';
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
     return (
         <Router>
             <div className="App">

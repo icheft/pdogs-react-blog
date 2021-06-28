@@ -124,6 +124,9 @@ html {
     .hamburger {
         display: block;
         cursor: pointer;
+        position: fixed;
+        right: 2.5rem;
+        /* top: 0; */
     }
 
     .hamburger.active .bar:nth-child(2) {
