@@ -324,7 +324,13 @@ button.danger:hover {
     background: rgba(0, 64, 154, 0.393);
 }
 
-/* comment */
+.card-form {
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    /* margin: auto; */
+    width: 100%;
+    padding-bottom: 2.2rem;
+}
 
 .comments-section {
     margin: 0 15px;
@@ -407,8 +413,7 @@ button.danger:hover {
 
 .comments-section .comment .comment-user .username {
     color: #000000;
-    font-style: italic;
-    font-weight: bold;
+    font-weight: 600;
 }
 .comments-section .comment .comment-user .user-details {
     color: rgb(0, 0, 0);
@@ -447,4 +452,13 @@ button.danger:hover {
 .comments-section button:hover {
     background: #ba0038;
     color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 0.8rem;
 }

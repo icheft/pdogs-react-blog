@@ -3,9 +3,10 @@ import useFetch from './useFetch';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { useEffect, useState } from 'react';
-import CommentBox from './Comment/CommentBox';
+import CommentSection from './Comment/CommentSection';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import firebase from './Comment/base';
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -81,7 +82,7 @@ const BlogDetails = () => {
                             </ReactMarkdown>
                         </div>
                     </article>
-                    <CommentBox blog={blog} />
+                    <CommentSection blog={blog} db={firebase} />
                 </div>
             )}
         </div>

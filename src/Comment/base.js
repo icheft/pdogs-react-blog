@@ -1,24 +1,20 @@
-import Rebase from 're-base';
 import firebase from 'firebase';
 
-//Use this file to put your Firebase configurations here and then rename it to base.js
-
-const app = firebase.initializeApp({
-    apiKey: 'AIzaSyD_B4PfAL5Go5N3gN3x5yksWdGt6XuQGvA',
-    authDomain: 'pdogs-blog-comment.firebaseapp.com',
-    databaseURL:
-        'https://pdogs-blog-comment-default-rtdb.asia-southeast1.firebasedatabase.app',
-    projectId: 'pdogs-blog-comment',
-    storageBucket: 'pdogs-blog-comment.appspot.com',
-    messagingSenderId: '87319842660',
-    appId: '1:87319842660:web:9dd8cbafca84e720283471',
-    measurementId: 'G-Y7EZJ1CXT9',
-});
-
-const base = Rebase.createClass(app.database());
-export const providers = {
-    facebook: new firebase.auth.FacebookAuthProvider(),
-    google: new firebase.auth.GoogleAuthProvider(),
+var config = {
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
-export const auth = firebase.auth();
-export default base;
+// firebase.initializeApp({});
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+} else {
+    firebase.app(); // if already initialized, use that one
+}
+
+export default firebase;
