@@ -334,10 +334,10 @@ button.danger:hover {
 
 .comments-section {
     margin: 0 15px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 5%;
+    /* position: relative; */
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
+    /* top: 5%; */
     width: 100%;
     margin-bottom: 10%;
 }
