@@ -3,6 +3,7 @@ import useFetch from './useFetch';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { useEffect, useState } from 'react';
+import CommentBox from './Comment/CommentBox';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
@@ -16,13 +17,17 @@ const BlogDetails = () => {
 
     const history = useHistory();
 
+    const handleEdit = () => {
+        history.push('/edit/' + blog.id);
+    };
+
     const handleDelete = () => {
         confirmAlert({
             customUI: ({ onClose }) => {
                 return (
                     <div className="custom-alert">
                         <h1>Are you sure?</h1>
-                        <p>You want to delete this file?</p>
+                        <p>You want to delete this post?</p>
                         <button onClick={onClose} className="info">
                             No
                         </button>
@@ -53,24 +58,32 @@ const BlogDetails = () => {
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {blog && (
-                <article>
-                    <h1>{blog.title}</h1>
-                    <p>
-                        Written by <span className="author">{blog.author}</span>{' '}
-                        @ {blog.date}
-                    </p>
-                    <div>
-                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                            {blog.body}
-                        </ReactMarkdown>
-                    </div>
-                </article>
-            )}
+                <div>
+                    <article>
+                        <button className="danger" onClick={handleDelete}>
+                            delete blog
+                        </button>
+                        <button className="edit" onClick={handleEdit}>
+                            edit blog
+                        </button>
+                        <br></br>
+                        <br></br>
 
-            <button className="danger" onClick={handleDelete}>
-                delete blog
-            </button>
-            <button className="edit">edit blog</button>
+                        <h1>{blog.title}</h1>
+                        <p>
+                            Written by{' '}
+                            <span className="author">{blog.author}</span> @{' '}
+                            {blog.date}
+                        </p>
+                        <div>
+                            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                                {blog.body}
+                            </ReactMarkdown>
+                        </div>
+                    </article>
+                    <CommentBox blog={blog} />
+                </div>
+            )}
         </div>
     );
 };

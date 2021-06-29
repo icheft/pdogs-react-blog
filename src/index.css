@@ -17,15 +17,20 @@ html {
 }
 
 .header {
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #f3d3d3;
+    /* position: relative; */
 }
 
 .navbar {
+    border-bottom: 2px solid #f3d3d3;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-
+    background-color: rgb(255, 255, 255);
+    width: 100%;
     /* padding: 20px;
     display: flex;
     align-items: center;
@@ -87,24 +92,25 @@ html {
 .nav-logo {
     font-size: 1.3rem;
     /* font-weight: 500; */
-    color: rgb(177, 78, 80);
+    color: rgb(179, 0, 0);
 }
 
 .content {
     margin-left: auto;
     margin-right: auto;
     /* original width: 615px; */
-    width: 645px;
+    max-width: 645px;
     /* max-width: 600px; */
     margin: 40px auto;
     padding: 20px;
+    padding-top: 5rem;
 }
 
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 4.2rem;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
@@ -230,12 +236,18 @@ html {
     display: block;
 }
 .create button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
     background: #f1356d;
     color: #fff;
     border: 0;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 1px;
     cursor: pointer;
+}
+.create button:hover {
+    background: #ba0038;
+    color: #fff;
 }
 
 /* buttons */
@@ -310,4 +322,129 @@ button.danger:hover {
 }
 .custom-alert > button.info:hover {
     background: rgba(0, 64, 154, 0.393);
+}
+
+/* comment */
+
+.comments-section {
+    margin: 0 15px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 5%;
+    width: 100%;
+    margin-bottom: 10%;
+}
+.comments-section h4 {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(30, 5, 5);
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+}
+.comments-section .comments {
+    color: rgb(30, 5, 5);
+}
+.comments-section .comments h4 {
+    border: 0;
+}
+.comments-section .comment {
+    background: #f7f7f780;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffefef;
+}
+.comments-section .comment:hover {
+    background: #dfdfdf46;
+    border-bottom: 1px solid #ffd0d0;
+}
+.comments-section .comment blockquote {
+    color: rgb(36, 1, 1);
+    padding: 1em;
+    border-left: 2px solid #76daff;
+    background: rgba(0, 0, 0, 0.05);
+}
+.comments-section .comment code {
+    font-family: Menlo, Monaco, monospace;
+    background: rgba(225, 225, 225, 0.2);
+    padding: 2px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+}
+.comments-section .comment .box {
+    background: #767676;
+    padding: 20px;
+}
+.comments-section .comment .box pre {
+    overflow: auto;
+    margin: 0;
+}
+.comments-section .comment .box pre code {
+    background: transparent;
+}
+.comments-section .comment .box + .box {
+    padding-top: 0px;
+}
+.comments-section .comment a {
+    color: #c90842;
+    text-decoration: none;
+}
+.comments-section .comment a:hover {
+    color: #da0041;
+    text-decoration: none;
+}
+
+.comments-section .comment .comment-user {
+    border-bottom: 1px solid #7e7e7e46;
+    padding: 5px 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.comments-section .comment .comment-user .username {
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
+.comments-section .comment .comment-user .user-details {
+    color: rgb(0, 0, 0);
+    /* margin-left: 10px; */
+}
+.comments-section .comment .comment-user .user-details span:last-child {
+    color: rgb(55, 55, 55);
+    font-size: 80%;
+}
+.comments-section .comment .comment-text {
+    padding: 5px 5px 5px 5px;
+}
+
+.comments-section input,
+.comments-section textarea,
+.comments-section select {
+    width: 100%;
+    padding: 9px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.comments-section button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    float: right;
+    padding: 8px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.comments-section button:hover {
+    background: #ba0038;
+    color: #fff;
 }

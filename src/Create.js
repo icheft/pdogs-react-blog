@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import AutoTextArea from './AutoTextArea';
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -55,7 +56,11 @@ const Create = () => {
                     required
                     placeholder="Your post body goes here. Express as much as you want."
                     value={body}
-                    onChange={(e) => setBody(e.target.value)}
+                    rows="20"
+                    onChange={(e) => {
+                        setBody(e.target.value);
+                        AutoTextArea(e);
+                    }}
                 />
                 <label>🙋🏾‍♂️ Post Author:</label>
                 <input

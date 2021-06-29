@@ -2,6 +2,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
 import About from './About';
+import Edit from './Edit';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
@@ -39,6 +40,9 @@ function App() {
                         </Route>
                         <Route path="/blogs/:id">
                             <BlogDetails />
+                        </Route>
+                        <Route path="/edit/:id">
+                            <Edit />
                         </Route>
                         <Route path="*">
                             {/* not catching any of the route */}
