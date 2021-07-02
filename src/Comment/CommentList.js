@@ -26,23 +26,12 @@ const CommentList = ({ db }) => {
         app.on('value', (snapshot) => {
             getData(snapshot.val());
         });
-        // someFirestoreAPICall().onSnapshot(snap => {
-        //     const data = snap.docs.map(doc => doc.data())
-        //     this.setData(data)
-        //  });
-
-        //remember to unsubscribe from your realtime listener on unmount or you will create a memory leak
-        // return () => unsubscribe();
     }, [db]);
 
     const handleDelete = (key, e) => {
         let dbCon = db.database().ref('/messages');
         dbCon.child(key).remove();
     };
-    // const handleEdit = (key, e) => {
-    //     let dbCon = db.database().ref('/messages');
-    //     dbCon.child(key).remove();
-    // };
 
     return (
         <div>

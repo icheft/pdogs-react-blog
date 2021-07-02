@@ -2,7 +2,7 @@
   "blogs": [
     {
       "title": "Yes We Can",
-      "body": "And God is still speaking. We can affirm our faith without endangering the separation of church and state, as long as we understand that when we're in the public square, we have to speak in universal terms that everyone can understand. The fact that so many people are surprised to hear that anger in some of Reverend Wright's sermons simply reminds us of the old truism that the most segregated hour in American life occurs on Sunday morning. Kennedy called our \"intellectual and moral strength.\" Yes, the government must lead on energy independence, but each of us must do our part to make our homes and businesses more efficient. But we should choose the right path, not just the easy path.\n\n<br>\n\n\nOur problems must be dealt with through partnership; progress must be shared. And yet Al Qaeda chose to ruthlessly murder these people, claimed credit for the attack, and even now states their determination to kill on a massive scale.\n\n\n<br>\n\nAnd it's around this time that some pastors I was working with came up to me and asked if I was a member of a church. And we cannot ignore the very real concerns of Americans who are not worried about illegal immigration because they are racist or xenophobic, but because they fear it will result in lower wages when they're already struggling to raise their families. I'll recruit an army of new teachers, and pay them higher salaries and give them more support. And I've seen it in this campaign. The enduring faith of over a billion people is so much bigger than the narrow hatred of a few.\n\n\n<br>\n\nThank you.",
+      "body": "And God is still speaking. We can affirm our faith without endangering the separation of church and state, as long as we understand that when we're in the public square, we have to speak in universal terms that everyone can understand. The fact that so many people are surprised to hear that anger in some of Reverend Wright's sermons simply reminds us of the old truism that the most segregated hour in American life occurs on Sunday morning. Kennedy called our \"intellectual and moral strength.\" Yes, the government must lead on energy independence, but each of us must do our part to make our homes and businesses more efficient. But we should choose the right path, not just the easy path.\n\n<br>\n\nbold **text**\n\n<br>\n\n\nOur problems must be dealt with through partnership; progress must be shared. And yet Al Qaeda chose to ruthlessly murder these people, claimed credit for the attack, and even now states their determination to kill on a massive scale.\n\n\n<br>\n\nAnd it's around this time that some pastors I was working with came up to me and asked if I was a member of a church. And we cannot ignore the very real concerns of Americans who are not worried about illegal immigration because they are racist or xenophobic, but because they fear it will result in lower wages when they're already struggling to raise their families. I'll recruit an army of new teachers, and pay them higher salaries and give them more support. And I've seen it in this campaign. The enduring faith of over a billion people is so much bigger than the narrow hatred of a few.\n\n\n<br>\n\nThank you.",
       "author": "Obama",
       "date": "2021-06-29",
       "id": 1
@@ -43,8 +43,8 @@
       "id": 6
     },
     {
-      "title": "Firebase Test",
-      "body": "This is a firebase test",
+      "title": "New Post ",
+      "body": "This is a new post",
       "author": "Brian",
       "date": "2021-06-29",
       "id": 7
