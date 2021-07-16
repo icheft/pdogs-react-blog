@@ -15,6 +15,10 @@ To start a local fake JSON server:
 npx json-server --watch data/db.json --port 8000
 ```
 
+Testing `.env` can be attained upon request. 
+
+
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
